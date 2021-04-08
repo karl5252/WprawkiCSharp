@@ -1,2 +1,0 @@
-# WprawkiCSharp
-wprawki w CSharp
