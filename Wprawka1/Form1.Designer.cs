@@ -31,7 +31,7 @@
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.fldlOpen = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +43,7 @@
             this.btnOpen.TabIndex = 0;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnClose
             // 
@@ -52,6 +53,7 @@
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox1
             // 
@@ -61,10 +63,10 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // openFileDialog1
+            // fldlOpen
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "*.jpg|*.png|*.bmp|";
+            this.fldlOpen.FileName = "fldflOpen";
+            this.fldlOpen.Filter = "*.jpg|*.png|*.bmp|";
             // 
             // Form1
             // 
@@ -86,7 +88,7 @@
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog fldlOpen;
     }
 }
 

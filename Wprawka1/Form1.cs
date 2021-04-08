@@ -16,5 +16,15 @@ namespace Wprawka1
         {
             InitializeComponent();
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            if (fldlOpen.ShowDialog() == DialogResult.OK) ;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
