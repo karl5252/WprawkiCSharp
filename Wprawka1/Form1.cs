@@ -20,6 +20,7 @@ namespace Wprawka1
         private void btnOpen_Click(object sender, EventArgs e)
         {
             if (fldlOpen.ShowDialog() == DialogResult.OK) ;
+            pictureBox1.ImageLocation = fldlOpen.FileName;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
