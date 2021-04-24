@@ -42,5 +42,11 @@ namespace Wprawka2.Test
             string output = FizzBuzz.GetVal(input);
             Assert.AreEqual("Fizz", output);
         }
+        [Test]
+        public void Buzzer_WhenDivisibleBy5_ReturnBuzz([Values(5,10)] int input)
+        {
+            string output = FizzBuzz.GetVal(input);
+            Assert.AreEqual("Buzz", output);
+        }
     }
 }
