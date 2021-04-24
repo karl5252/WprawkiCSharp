@@ -19,7 +19,15 @@ namespace Wprawka2
         {
             //throw new NotImplementedException();
             //return "1";
+            if (input  == 3)
+            {
+                return "Fizz";
+            }else if (input == 5)
+            {
+                return "Buzz";
+            }
             return input.ToString();
+
         }
     }
 }

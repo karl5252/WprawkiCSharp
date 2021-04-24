@@ -11,24 +11,30 @@ namespace Wprawka2.Test
     public class FizzBuzzTest
     {
         [Test]
-        public void Buzzer_When1_Returns1()
+        public void Buzzer_WhenDefault_ReturnsInput([Values(1,2,4,7,8,9)] int input)
         {
-            //Arrange
-            int input = 1;
-
             //Act
             string output = FizzBuzz.GetVal(input);
             //Assert.Pass();
 
             //Assert
-            Assert.AreEqual("1", output);
-        }
+            Assert.AreEqual(input.ToString(), output);
+        }     
         [Test]
-        public void Buzzer_When2_Returns2()
+        public void Buzzer_When3_ReturnsFizz()
         {
-            int input = 2;
+            int input = 3;
             string output = FizzBuzz.GetVal(input);
-            Assert.AreEqual("2", output);
+            Assert.AreEqual("Fizz", output);
+        }
+       
+        [Test]
+        public void Buzzer_WhenDefault_ReturnBuzz(
+            [Values(5)] int input)
+        {
+            
+            string output = FizzBuzz.GetVal(input);
+            Assert.AreEqual("Buzz", output);
         }
     }
 }
