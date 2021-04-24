@@ -37,16 +37,22 @@ namespace Wprawka2.Test
             Assert.AreEqual("Buzz", output);
         }
         [Test]
-        public void Buzzer_WhenDivisibleBy3_ReturnFizz([Values(3,6,9)] int input)
+        public void Buzzer_WhenDivisibleBy3_ReturnFizz([Values(3,6,9,12,18,21,24,27)] int input)
         {
             string output = FizzBuzz.GetVal(input);
             Assert.AreEqual("Fizz", output);
         }
         [Test]
-        public void Buzzer_WhenDivisibleBy5_ReturnBuzz([Values(5,10)] int input)
+        public void Buzzer_WhenDivisibleBy5_ReturnBuzz([Values(5,10,20)] int input)
         {
             string output = FizzBuzz.GetVal(input);
             Assert.AreEqual("Buzz", output);
+        }
+        [Test]
+        public void Buzzer_WhenDivisibleBy3And5_ReturnFizzBuzz([Values(15,30)] int input)
+        {
+            string output = FizzBuzz.GetVal(input);
+            Assert.AreEqual("FizzBuzz", output);
         }
     }
 }
