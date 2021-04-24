@@ -19,6 +19,16 @@ namespace Wprawka2.Test
             //Act
             string output = FizzBuzz.GetVal(input);
             //Assert.Pass();
+
+            //Assert
+            Assert.AreEqual("1", output);
+        }
+        [Test]
+        public void Buzzer_When2_Returns2()
+        {
+            int input = 2;
+            string output = FizzBuzz.GetVal(input);
+            Assert.AreEqual("2", output);
         }
     }
 }
