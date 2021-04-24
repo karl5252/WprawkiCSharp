@@ -11,7 +11,7 @@ namespace Wprawka2.Test
     public class FizzBuzzTest
     {
         [Test]
-        public void Buzzer_WhenDefault_ReturnsInput([Values(1,2,4,7,8,9)] int input)
+        public void Buzzer_WhenDefault_ReturnsInput([Values(1,2,4,7,8)] int input)
         {
             //Act
             string output = FizzBuzz.GetVal(input);
@@ -35,6 +35,12 @@ namespace Wprawka2.Test
             
             string output = FizzBuzz.GetVal(input);
             Assert.AreEqual("Buzz", output);
+        }
+        [Test]
+        public void Buzzer_WhenDivisibleBy3_ReturnFizz([Values(3,6,9)] int input)
+        {
+            string output = FizzBuzz.GetVal(input);
+            Assert.AreEqual("Fizz", output);
         }
     }
 }

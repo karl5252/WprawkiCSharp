@@ -19,7 +19,7 @@ namespace Wprawka2
         {
             //throw new NotImplementedException();
             //return "1";
-            if (input  == 3)
+            if (input % 3 == 0)
             {
                 return "Fizz";
             }else if (input == 5)
